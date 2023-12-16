@@ -1,52 +1,49 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
-#include <Windows.h>
 
 
-//Структура содержит: Номер счета, Имя владельца, Баланс счета
-//и функции изменения баланса и вывод состояния счета
+//РЎС‚СЂСѓРєС‚СѓСЂР° СЃРѕРґРµСЂР¶РёС‚: РќРѕРјРµСЂ СЃС‡РµС‚Р°, РРјСЏ РІР»Р°РґРµР»СЊС†Р°, Р‘Р°Р»Р°РЅСЃ СЃС‡РµС‚Р°
+//Рё С„СѓРЅРєС†РёРё РёР·РјРµРЅРµРЅРёСЏ Р±Р°Р»Р°РЅСЃР° Рё РІС‹РІРѕРґ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃС‡РµС‚Р°
 struct bankAccountInformation
 {
     int& accountNumber;
     std::string& nameOwner;
     double& amountMoney;
 
-//функция изменения баланса
+//С„СѓРЅРєС†РёСЏ РёР·РјРµРЅРµРЅРёСЏ Р±Р°Р»Р°РЅСЃР°
     void changeBalance()
     {
-        std::cout << "Введите новый баланс: ";
+        std::cout << "Р’РІРµРґРёС‚Рµ РЅРѕРІС‹Р№ Р±Р°Р»Р°РЅСЃ: ";
         std::cin >> amountMoney;
         std::cout << std::endl;
     }
     
-//функция вывода состояния счета
+//С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃС‡РµС‚Р°
     void print()
     {
-        std::cout << "Ваш счет: " << nameOwner << ',' << ' ' << accountNumber << ',' << ' ' << amountMoney << std::endl;
+        std::cout << "Р’Р°С€ СЃС‡РµС‚: " << nameOwner << ',' << ' ' << accountNumber << ',' << ' ' << amountMoney << std::endl;
     }
 };
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
 
     int number;
     std::string name;
     double balance;
 
-    std::cout << "Введите номер счета: ";
+    std::cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‡РµС‚Р°: ";
     std::cin >> number;
     std::cout << std::endl;
-    std::cout << "Введите имя: ";
+    std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ: ";
     std::cin >> name;
     std::cout << std::endl;
-    std::cout << "Введите баланс: ";
+    std::cout << "Р’РІРµРґРёС‚Рµ Р±Р°Р»Р°РЅСЃ: ";
     std::cin >> balance;
     std::cout << std::endl;
 
-    bankAccountInformation user{ number, name , balance };
+    bankAccountInformation user{ number, name, balance };
     user.changeBalance();
     user.print();
 }
