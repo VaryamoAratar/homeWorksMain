@@ -2,28 +2,26 @@
 #include <string>
 
 
-//Структура содержит: Номер счета, Имя владельца, Баланс счета
-//и функции изменения баланса и вывод состояния счета
+//Структура для хранения информации о банковском счете 
 struct bankAccountInformation
 {
-    int& accountNumber;
-    std::string& nameOwner;
-    double& amountMoney;
+    int accountNumber;      //Номер счета
+    std::string nameOwner;  //Имя владельца
+    double amountMoney;     //Баланс счета
+};
+
+//функция вывода состояния счета
+void print (bankAccountInformation& user)
+{
+    std::cout << "Ваш счет: " << user.nameOwner << ',' << ' ' << user.accountNumber << ',' << ' ' << user.amountMoney << std::endl;
+}
+
 
 //функция изменения баланса
-    void changeBalance()
-    {
-        std::cout << "Введите новый баланс: ";
-        std::cin >> amountMoney;
-        std::cout << std::endl;
-    }
-    
-//функция вывода состояния счета
-    void print()
-    {
-        std::cout << "Ваш счет: " << nameOwner << ',' << ' ' << accountNumber << ',' << ' ' << amountMoney << std::endl;
-    }
-};
+void changeBalance(bankAccountInformation& user, const double& newBalance)
+{
+    user.amountMoney = newBalance;
+}
 
 int main()
 {
@@ -32,6 +30,7 @@ int main()
     int number;
     std::string name;
     double balance;
+    double newBalance;
 
     std::cout << "Введите номер счета: ";
     std::cin >> number;
@@ -44,7 +43,12 @@ int main()
     std::cout << std::endl;
 
     bankAccountInformation user{ number, name, balance };
-    user.changeBalance();
-    user.print();
+
+    std::cout << "Введите новый баланс: ";
+    std::cin >> newBalance;
+    std::cout << std::endl;
+
+    changeBalance(user, newBalance);
+    print(user);
 }
 
