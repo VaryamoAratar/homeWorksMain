@@ -15,7 +15,7 @@ protected:
         std::cout << get_name() << ':' << ' ' << get_sides_count() << std::endl;
     }
     int get_sides_count() { return sides_count; }
-    std::string get_name() { return (std::string(name)); }
+    std::string get_name() { return (std::string(name)); } 
 
 private:
     int sides_count = 0;
@@ -40,11 +40,11 @@ int main()
     setlocale(LC_ALL, "Russian");
 
     std::cout << "Количество сторон:" << std::endl;
-    Figure var1;
-    Triangle var2;
-    Quadrangle var3;
-    Figure var4;
-
+    Figure fig0;
+    Triangle fig3;
+    Quadrangle fig4;
+    Figure fig0_v2;
+    
     return 0;
  }
 
