@@ -4,22 +4,17 @@
 class Figure
 {
 public:
-    Figure()
-    {
-        std::cout << get_name() << ':' << ' ' << get_sides_count() << std::endl;
-    }
-
-protected:
-    Figure(int sides_count, std::string name) : sides_count{ sides_count }, name { name }
-    {
-        std::cout << get_name() << ':' << ' ' << get_sides_count() << std::endl;
-    }
+    Figure() : Figure(0, "Фигура")
+    {}
     int get_sides_count() { return sides_count; }
-    std::string get_name() { return (std::string(name)); } 
-
+    std::string get_name() { return (std::string(name)); }
+protected:
+    Figure(int sides_count, std::string name) : sides_count{ sides_count }, name{ name }
+    {}
+     
 private:
-    int sides_count = 0;
-    std::string name = "Фигура";
+    int sides_count;
+    std::string name;
 };
 
 class Triangle : public Figure
@@ -39,12 +34,15 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    std::cout << "Количество сторон:" << std::endl;
     Figure fig0;
     Triangle fig3;
     Quadrangle fig4;
-    Figure fig0_v2;
-    
+
+    std::cout << "Количество сторон:" << std::endl;
+    std::cout << fig0.get_name() << ':' << ' ' << fig0.get_sides_count() << std::endl;
+    std::cout << fig3.get_name() << ':' << ' ' << fig3.get_sides_count() << std::endl;
+    std::cout << fig4.get_name() << ':' << ' ' << fig4.get_sides_count() << std::endl;
+
     return 0;
  }
 
