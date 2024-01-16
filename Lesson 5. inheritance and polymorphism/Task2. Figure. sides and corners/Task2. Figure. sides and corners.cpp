@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 
+//Базовый класс Фигуры
 class Figure
 {
 public:
@@ -18,13 +19,14 @@ public:
     int get_angle_D() { return angle_D; }
       
 protected:
-    Figure(int sides_count, std::string name);
     void set_name(std::string newName) { name = newName; };
     void set_sides_count(int newSideCount) { sides_count = newSideCount; }
+
     void set_side_a(int a) { side_a = a; }
     void set_side_b(int b) { side_b = b; }
     void set_side_c(int c) { side_c = c; }
     void set_side_d(int d) { side_d = d; }
+
     void set_angle_A(int A) { angle_A = A; }
     void set_angle_B(int B) { angle_B = B; }
     void set_angle_C(int C) { angle_C = C; }
@@ -33,6 +35,7 @@ protected:
 private:
     int sides_count;
     std::string name;
+
     int side_a{ 0 };
     int side_b{ 0 };
     int side_c{ 0 };
@@ -42,7 +45,6 @@ private:
     int angle_B{ 0 };
     int angle_C{ 0 };
     int angle_D{ 0 };
-
 };
 
 Figure::Figure()
@@ -51,36 +53,18 @@ Figure::Figure()
     name = "Фигура";
 }
 
-Figure::Figure(int sides_count, std::string name)
-{
-    this->sides_count = sides_count;
-    this->name = name;
-}
-
+//Треугольник
 class Triangle : public Figure
 {
 public:
     Triangle();
-    
-    //int get_side_a() { return side_a; }
-    //int get_side_b() { return side_b; }
-    //int get_side_c() { return side_c; }
-
-    //int get_angle_A() { return angle_A; }
-    //int get_angle_B() { return angle_B; }
-    //int get_angle_C() { return angle_C; }
   
 protected:
     Triangle(int a, int b, int c, int A, int B, std::string name);
     Triangle(int a, int b, int A, int B, std::string name);
     Triangle(int a, std::string name);
+};
 
-private:
-    int sides_count{ 3 };
-    std::string name{ "Треугольник" };
-
- };
-//Треугольник
 Triangle::Triangle()
 {
     set_side_a(10);
@@ -89,134 +73,145 @@ Triangle::Triangle()
     set_angle_A(35);
     set_angle_B(40);
     set_angle_C(105);
-    set_name(name);
-    set_sides_count(sides_count);
+    set_name("Треугольник");
+    set_sides_count(3);
 };
-//Прямоугольный треугольник
-Triangle::Triangle(int a, int b, int c, int A, int B, std::string newName) 
-
-{
-    set_side_a(a);
-    set_side_b(b);
-    set_side_c(c);
-    set_angle_A(A);
-    set_angle_B(B);
-    set_angle_C(90);
-    set_name(newName);
-    set_sides_count(sides_count);
-}
-//Равнобедренный треугольник
-Triangle::Triangle(int a, int b, int A, int B, std::string newName)
-
-{
-    set_side_a(a);
-    set_side_b(b);
-    set_side_c(a);
-    set_angle_A(A);
-    set_angle_B(B);
-    set_angle_C(A);
-    set_name(newName);
-    set_sides_count(sides_count);
-}
-//Равносторонний треугольник
-Triangle::Triangle(int a, std::string newName)
-
-{
-    set_side_a(a);
-    set_side_b(a);
-    set_side_c(a);
-    set_angle_A(60);
-    set_angle_B(60);
-    set_angle_C(60);
-    set_name(newName);
-    set_sides_count(sides_count);
-}
 
 //Прямоугольный треугольник
 class RightTriangle : public Triangle
 {
 public:
     RightTriangle ();
-    
-
-private:
-
 };
 
-RightTriangle::RightTriangle() : Triangle{ 6, 3, 5, 30, 60, "Прямоугольный треугольник" }
-{}
+RightTriangle::RightTriangle()
+{
+    set_angle_C(90);
+    set_name("Прямоугольный треугольник");
+}
 
 //Равнобедренный треугольник
 class IsoscelesTriangle : public Triangle
 {
 public:
     IsoscelesTriangle();
-    
-
-private:
-
 };
 
-IsoscelesTriangle::IsoscelesTriangle() : Triangle{ 20, 40, 35, 70, "Равнобедренный треугольник"}
+IsoscelesTriangle::IsoscelesTriangle()
 {
+    set_side_c(get_side_a());
+    set_angle_C(get_angle_A());
+    set_name("Равнобедренный треугольник");
 }
 
 //Равносторонний треугольник
-class EquilateralTriangle : public Triangle
+class EquilateralTriangle : public IsoscelesTriangle
 {
 public:
     EquilateralTriangle();
-   
-private:
-
 };
 
-EquilateralTriangle::EquilateralTriangle() : Triangle{ 50, "Равносторонний треугольник" }
+EquilateralTriangle::EquilateralTriangle()
 {
+    set_side_b(get_side_a());
+    set_angle_B(get_angle_A());
+    set_name("Равносторонний треугольник");
 }
 
-
-
-class Rectangle
-{
-public:
-    Rectangle();
-
-
-private:
-
-};
-
-Rectangle::Rectangle()
-{
-}
-
+//Четырехугольник
 class Quadrangle : public Figure
 {
 public:
     Quadrangle();
-
-private:
-    
-    int sides_count{ 4 };
-    std::string name = "Четырехугольник";
-
 };
+
 Quadrangle::Quadrangle()
 {
     set_side_a(10);
     set_side_b(15);
     set_side_c(25);
     set_side_d(40);
+
     set_angle_A(35);
     set_angle_B(40);
     set_angle_C(105);
     set_angle_D(100);
-    set_name(name);
-    set_sides_count(sides_count);
 
+    set_name("Четырехугольник");
+    set_sides_count(4);
 }
 
+//Параллелограмм
+class Parallelogram : public Quadrangle
+{
+public:
+    Parallelogram();
+};
+
+Parallelogram::Parallelogram()
+{
+    set_side_c(get_side_a());
+    set_side_d(get_side_b());
+
+    set_angle_C(get_angle_A());
+    set_angle_D(get_angle_B());
+
+    set_name("Параллелограмм");
+}
+
+//Прямоугольник
+class Rectangle : public Parallelogram
+{
+public:
+    Rectangle();
+};
+
+Rectangle::Rectangle()
+{
+    set_angle_A(90);
+    set_angle_B(get_angle_A());
+    set_angle_C(get_angle_A());
+    set_angle_D(get_angle_A());
+
+    set_name("Прямоугольник");
+}
+
+//Квадрат
+class Square : public Rectangle
+{
+public:
+    Square();
+};
+
+Square::Square()
+{
+    set_side_b(get_side_a());
+    set_side_c(get_side_a());
+    set_side_d(get_side_a());
+
+    set_name("Квадрат");
+}
+
+//Ромб
+class Rhomb : public Quadrangle
+{
+public:
+    Rhomb();
+};
+
+Rhomb::Rhomb()
+{
+    set_side_b(get_side_a());
+    set_side_c(get_side_a());
+    set_side_d(get_side_a());
+
+    set_angle_C(get_angle_A());
+    set_angle_D(get_angle_B());
+
+    set_name("Ромб");
+}
+
+//Функция вывода данных объектов в консоль 
 void print_info(Figure* in)
 {
     if (in->get_sides_count() == 0)
@@ -228,41 +223,75 @@ void print_info(Figure* in)
     else if (in->get_sides_count() == 3)
     {
         std::cout << in->get_name() << std::endl;
-        std::cout << "Стороны: " << "a=" << in->get_side_a() << ' ' << "b=" << in->get_side_b() << ' ' << "c=" << in->get_side_c() << std::endl;
-        std::cout << "Углы: "    << "A=" << in->get_angle_A() << ' ' << "B=" << in->get_angle_B() << ' ' << "C=" << in->get_angle_C() << std::endl;
+        std::cout << "Стороны: " << "a=" << in->get_side_a() << ' ' 
+                                 << "b=" << in->get_side_b() << ' ' 
+                                 << "c=" << in->get_side_c() << std::endl;
+        std::cout << "Углы: "    << "A=" << in->get_angle_A() << ' ' 
+                                 << "B=" << in->get_angle_B() << ' ' 
+                                 << "C=" << in->get_angle_C() << std::endl;
     }
     else
     {
         std::cout << in->get_name() << std::endl;
-        std::cout << "Стороны: " << "a=" << in->get_side_a() << ' ' << "b=" << in->get_side_b() << ' ' << "c=" << in->get_side_c() << ' ' << "d=" << in->get_side_d() << std::endl;
-        std::cout << "Углы: " << "A=" << in->get_angle_A() << ' ' << "B=" << in->get_angle_B() << ' ' << "C=" << in->get_angle_C() << ' ' << "D=" << in->get_angle_D() << std::endl;
+        std::cout << "Стороны: " << "a=" << in->get_side_a() << ' ' 
+                                 << "b=" << in->get_side_b() << ' ' 
+                                 << "c=" << in->get_side_c() << ' ' 
+                                 << "d=" << in->get_side_d() << std::endl;
+        std::cout << "Углы: " << "A=" << in->get_angle_A() << ' ' 
+                              << "B=" << in->get_angle_B() << ' ' 
+                              << "C=" << in->get_angle_C() << ' ' 
+                              << "D=" << in->get_angle_D() << std::endl;
     }
 }
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
- 
-    Figure figure;
-    Triangle triangle;
-    RightTriangle rTriangle;
-    IsoscelesTriangle iTriangle;
-    EquilateralTriangle eTriangle;
-    Quadrangle quadrangle;
+    
+    //Создаем объекты
+    Figure figure;                  //фигура без сторон
+    Triangle triangle;              //треугольник
+    RightTriangle rTriangle;        //прямоугольный треугольник
+    IsoscelesTriangle iTriangle;    //равнобедренный треугольник
+    EquilateralTriangle eTriangle;  //равносторонний треугольник
+    Quadrangle quadrangle;          //четырехугольник
+    Rectangle rectangle;            //прямоугольник
+    Square square;                  //квадрат
+    Parallelogram parallelogram;    //параллелограмм
+    Rhomb rhomb;                    //ромб
 
+    //Создаем указатели на базовый класс, со значениями производных классов
     Figure* f_figure = &figure;
     Figure* f_triangle = &triangle;
     Figure* f_rTriangle = &rTriangle;
     Figure* f_iTriangle = &iTriangle;
     Figure* f_eTriangle = &eTriangle;
     Figure* f_quadrangle = &quadrangle;
+    Figure* f_rectangle = &rectangle;
+    Figure* f_square = &square;
+    Figure* f_parallelogram = &parallelogram;
+    Figure* f_rhomb = &rhomb;
 
+    //выводим данные объектов
     print_info(f_figure);
+    std::cout << std::endl;
     print_info(f_triangle);
+    std::cout << std::endl;
     print_info(f_rTriangle);
+    std::cout << std::endl;
     print_info(f_iTriangle);
+    std::cout << std::endl;
     print_info(f_eTriangle);
+    std::cout << std::endl;
     print_info(f_quadrangle);
+    std::cout << std::endl;
+    print_info(f_rectangle);
+    std::cout << std::endl;
+    print_info(f_square);
+    std::cout << std::endl;
+    print_info(f_parallelogram);
+    std::cout << std::endl;
+    print_info(f_rhomb);
 
     return 0;
 }
