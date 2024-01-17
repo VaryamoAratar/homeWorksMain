@@ -4,15 +4,17 @@
 class Figure
 {
 public:
-    Figure() : Figure(0, "Фигура")
-    {}
+    Figure() : Figure(0)
+    {
+        name = "Фигура";
+    };
+
     int get_sides_count() { return sides_count; }
     std::string get_name() { return (std::string(name)); }
 protected:
-    Figure(int sides_count, std::string name) : sides_count{ sides_count }, name{ name }
+    Figure(int sides_count) : sides_count{ sides_count }
     {}
      
-private:
     int sides_count;
     std::string name;
 };
@@ -20,14 +22,20 @@ private:
 class Triangle : public Figure
 {
 public:
-    Triangle() : Figure(3, "Треугольник") {};
+    Triangle() : Figure(3) 
+    {
+        name = "Треугольник";
+    };
 };
 
 
 class Quadrangle : public Figure
 {
 public:
-    Quadrangle() : Figure(4, "Квадрат") {};
+    Quadrangle() : Figure(4) 
+    {
+        name = "Квадрат";
+    };
 };
 
 int main()
