@@ -59,10 +59,6 @@ class Triangle : public Figure
 public:
     Triangle();
   
-protected:
-    Triangle(int a, int b, int c, int A, int B, std::string name);
-    Triangle(int a, int b, int A, int B, std::string name);
-    Triangle(int a, std::string name);
 };
 
 Triangle::Triangle()
