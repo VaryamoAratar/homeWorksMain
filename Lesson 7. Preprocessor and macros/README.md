@@ -1,7 +1,7 @@
-## Урок 7.
+## РЈСЂРѕРє 7.
 
-### Препроцессор и макросы
+### РџСЂРµРїСЂРѕС†РµСЃСЃРѕСЂ Рё РјР°РєСЂРѕСЃС‹
 
-[Задание 1. Препроцессорные директивы](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%207.%20Preprocessor%20and%20macros/Task1.%20Preprocessor%20directives).
+[Р—Р°РґР°РЅРёРµ 1. РџСЂРµРїСЂРѕС†РµСЃСЃРѕСЂРЅС‹Рµ РґРёСЂРµРєС‚РёРІС‹](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%207.%20Preprocessor%20and%20macros/Task1.%20Preprocessor%20directives).
 
-[Задание 2. Макрос SUB](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%207.%20Preprocessor%20and%20macros/Task2.%20macro%20SUB).
+[Р—Р°РґР°РЅРёРµ 2. РњР°РєСЂРѕСЃ SUB](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%207.%20Preprocessor%20and%20macros/Task2.%20macro%20SUB).
