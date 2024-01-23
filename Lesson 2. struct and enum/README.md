@@ -1,9 +1,7 @@
-# «Структуры и перечисления»
+# В«РЎС‚СЂСѓРєС‚СѓСЂС‹ Рё РїРµСЂРµС‡РёСЃР»РµРЅРёСЏВ»
 
-[Задание 1. Месяцы](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%202.%20struct%20and%20enum/Task%201.%20Months)
+[Р—Р°РґР°РЅРёРµ 1. РњРµСЃСЏС†С‹](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%202.%20struct%20and%20enum/Task%201.%20Months)
 
-[Задание 2. Счета](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%202.%20struct%20and%20enum/Task%202.%20Accounts)
+[Р—Р°РґР°РЅРёРµ 2. РЎС‡РµС‚Р°](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%202.%20struct%20and%20enum/Task%202.%20Accounts)
 
-[Задание 3. Вывод структуры](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%202.%20struct%20and%20enum/Task%203.%20Structure%20output)
-
-
+[Р—Р°РґР°РЅРёРµ 3. Р’С‹РІРѕРґ СЃС‚СЂСѓРєС‚СѓСЂС‹](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%202.%20struct%20and%20enum/Task%203.%20Structure%20output)
