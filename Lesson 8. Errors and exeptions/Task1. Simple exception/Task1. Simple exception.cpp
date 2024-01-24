@@ -1,5 +1,6 @@
 ﻿#include <Windows.h>
 #include "function.h"
+#include <exception>
 
 int main()
 {
@@ -20,9 +21,9 @@ int main()
             std::cout << "Длина слова " << '"' << str << '"' << " равна " << function(&str, forbidden_length);
         }
     }
-    catch (const char* err)
+    catch (const std::exception& err)
     {
-        std::cout << err << std::endl;
+        std::cout << err.what() << std::endl;
     }
     return 0;
 }
