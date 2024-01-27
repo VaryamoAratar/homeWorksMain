@@ -6,7 +6,6 @@ class Triangle : public Figure
 {
 public:
     Triangle();
-    ~Triangle();
 
     void print_info() override;
 

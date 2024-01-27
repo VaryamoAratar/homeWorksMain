@@ -7,7 +7,6 @@ class Figure
 {
 public:
     Figure();
-    ~Figure();
     //виртуальный метод для вывода данных в консоль
     virtual void print_info();
     
