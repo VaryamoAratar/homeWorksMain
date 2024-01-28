@@ -1,0 +1,3 @@
+D:/Code/Study/homeWorksMain/Lesson 10. CMake/Task 1. The simplest project/build/CMakeFiles/my_first_cmake_program.dir
+D:/Code/Study/homeWorksMain/Lesson 10. CMake/Task 1. The simplest project/build/CMakeFiles/ALL_BUILD.dir
+D:/Code/Study/homeWorksMain/Lesson 10. CMake/Task 1. The simplest project/build/CMakeFiles/ZERO_CHECK.dir
