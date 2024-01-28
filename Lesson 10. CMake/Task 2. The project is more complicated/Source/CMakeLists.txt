@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.2)
+project(Task_2_Cmake_more_complicated VERSION 0.1)
+include_directories(Classes)
+add_executable(Task_2_Cmake_more_complicated Task3._class_hierarchy.cpp)
+add_subdirectory(Classes)
+target_link_libraries(Task_2_Cmake_more_complicated Classes)

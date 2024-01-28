@@ -1,0 +1,4 @@
+D:/Code/Study/homeWorksMain/Lesson 10. CMake/Task 2. The project is more complicated/build/CMakeFiles/Task_2_Cmake_more_complicated.dir
+D:/Code/Study/homeWorksMain/Lesson 10. CMake/Task 2. The project is more complicated/build/CMakeFiles/ALL_BUILD.dir
+D:/Code/Study/homeWorksMain/Lesson 10. CMake/Task 2. The project is more complicated/build/CMakeFiles/ZERO_CHECK.dir
+D:/Code/Study/homeWorksMain/Lesson 10. CMake/Task 2. The project is more complicated/build/Classes/CMakeFiles/Classes.dir

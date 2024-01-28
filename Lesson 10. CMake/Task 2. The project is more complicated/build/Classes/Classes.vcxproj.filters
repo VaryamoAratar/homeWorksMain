@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\print_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\EquilateralTriangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\Figure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\IsoscelesTriangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\Parallelogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\Quadrangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\Rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\Rhomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\RightTriangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\Square.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Code\Study\homeWorksMain\Lesson 10. CMake\Task 2. The project is more complicated\Source\Classes\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8BDBCCE5-D5ED-3C5B-85CF-32292FEA0763}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
