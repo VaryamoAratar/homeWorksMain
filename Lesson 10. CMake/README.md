@@ -2,6 +2,6 @@
 
 ### CMake
 
-[Задание 1. Простейший проект](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%209.%20Operator%20overloading/Task1.%20Comparisons%20in%20fractions).
+[Задание 1. Простейший проект](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%2010.%20CMake/Task%201.%20The%20simplest%20project).
 
-[Задание 2. Проект посложнее](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%209.%20Operator%20overloading/Task2.%20Other%20operations%20with%20fractions).
+[Задание 2. Проект посложнее](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%2010.%20CMake/Task%202.%20The%20project%20is%20more%20complicated).
