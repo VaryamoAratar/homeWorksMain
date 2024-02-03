@@ -1,10 +1,12 @@
 #pragma once
+#include<iostream>
 
 class Fraction
 {
 private:
 	int numerator_;
 	int denominator_;
+	int nod(int numerator, int denominator);
 
 public:
 	int get_numerator();
@@ -25,4 +27,6 @@ public:
 	Fraction operator++(int);
 	Fraction operator--();
 	Fraction operator--(int);
+
+	friend std::ostream& operator << (std::ostream&, const Fraction& f);
 };
