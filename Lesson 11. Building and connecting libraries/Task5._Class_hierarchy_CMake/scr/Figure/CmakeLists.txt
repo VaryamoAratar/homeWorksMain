@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.2)
+project(Figure_lib VERSION 0.1 LANGUAGES CXX)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../../bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../bin)
+set(Figure_lib_source EquilateralTriangle.h Figure.h IsoscelesTriangle.h Parallelogram.h print_info.h Quadrangle.h Rectangle.h Rhomb.h RightTriangle.h Square.h Triangle.h EquilateralTriangle.cpp Figure.cpp IsoscelesTriangle.cpp Parallelogram.cpp print_info.cpp Quadrangle.cpp Rectangle.cpp Rhomb.cpp RightTriangle.cpp Square.cpp Triangle.cpp)
+add_library(Figure_lib SHARED ${Figure_lib_source})
