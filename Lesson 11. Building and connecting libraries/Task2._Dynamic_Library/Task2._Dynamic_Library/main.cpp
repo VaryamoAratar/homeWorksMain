@@ -1,18 +1,16 @@
-#include"Greeter.h"
-#include<Windows.h>
+#include "Leaver.h"
+#include <Windows.h>
 
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	Greeter hello;
+	Leaver bye;
 	std::string name;
-
 	std::cout << "¬ведите им€: ";
 	std::cin >> name;
-	hello.greet(name);
-	system("pause");
+	std::cout << bye.leave(name) << std::endl;
 
 	return 0;
 }
