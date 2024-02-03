@@ -61,7 +61,7 @@
 
 [Задание 1. Простое исключение](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%208.%20Errors%20and%20exeptions/Task1.%20Simple%20exception).
 
-[Задание 2. Исключения в конструкторах]().
+[Задание 2. Исключения в конструкторах](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%208.%20Errors%20and%20exeptions/Task%202.%20Exceptions%20in%20constructors).
 
 ## Урок 9.
 
@@ -83,13 +83,12 @@
 
 ### Сборка и подключение библиотек
 
-[Задание 1. Статическая библиотека]().
+[Задание 1. Статическая библиотека](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%2011.%20Building%20and%20connecting%20libraries/Task1.%20Static_library).
 
-[Задание 2. Динамическая библиотека]().
+[Задание 2. Динамическая библиотека](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%2011.%20Building%20and%20connecting%20libraries/Task2._Dynamic_Library).
 
-[Задание 3. Динамическая библиотека CMake]().
+[Задание 3. Динамическая библиотека CMake](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%2011.%20Building%20and%20connecting%20libraries/Task3._Dinamic_library_CMake/scr).
 
-[Задание 4*. Иерархия классов в DLL, проекты VC++]().
+[Задание 4*. Иерархия классов в DLL, проекты VC++](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%2011.%20Building%20and%20connecting%20libraries/Task4._Class_hierarchy).
 
-[Задание 5*. Иерархия классов в DLL и CMake]().
-
+[Задание 5*. Иерархия классов в DLL и CMake](https://github.com/VaryamoAratar/homeWorksMain/tree/main/Lesson%2011.%20Building%20and%20connecting%20libraries/Task5._Class_hierarchy_CMake/scr).
