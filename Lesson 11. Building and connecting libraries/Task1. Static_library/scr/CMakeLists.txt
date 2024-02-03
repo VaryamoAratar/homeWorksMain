@@ -1,8 +1,0 @@
-cmake_minimum_required(VERSION 3.22.2)
-project(Static_library VERSION 0.1 LANGUAGES CXX)
-set(CMAKE_CXX_FLAGS_RELEASE)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ..//lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ..//bin)
-add_library(myLib Static Greeter.h Greeter.cpp)
-add_executable(Static_library main.cpp)
-target_link_libraries(Static_library myLib)

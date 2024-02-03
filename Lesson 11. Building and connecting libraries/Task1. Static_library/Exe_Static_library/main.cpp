@@ -1,4 +1,4 @@
-#include"Greeter.h"
+#include "Greeter.h"
 #include<Windows.h>
 
 int main()
@@ -8,11 +8,9 @@ int main()
 
 	Greeter hello;
 	std::string name;
-
 	std::cout << "¬ведите им€: ";
 	std::cin >> name;
-	hello.greet(name);
-	system("pause");
+	std::cout << hello.greet(name) << std::endl;
 
 	return 0;
 }

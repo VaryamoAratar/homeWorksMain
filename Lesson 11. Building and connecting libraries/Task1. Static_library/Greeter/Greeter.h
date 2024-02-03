@@ -1,10 +1,11 @@
 #pragma once
-#include<string>
 #include<iostream>
+#include<string>
 
 class Greeter
 {
 public:
 	Greeter();
-	void greet(std::string& in);
+	std::string greet(std::string in);
 };
+
