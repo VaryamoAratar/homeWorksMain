@@ -92,7 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;LEAVER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;LEAVER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -124,7 +124,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;LEAVER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -140,7 +140,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;LEAVER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Code\Study\homeWorksMain\Lesson 11. Building and connecting libraries\Task2._Dynamic_Library\Leaver;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
