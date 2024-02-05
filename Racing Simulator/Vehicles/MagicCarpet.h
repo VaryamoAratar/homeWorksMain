@@ -7,14 +7,16 @@
 #define MAGICCARPET_EXPORT_API __declspec(dllimport)
 #endif // !FMAGICCARPET_EXPORT
 
-class MagicCarpet :
-    public AirVehicles
+namespace race
 {
-protected:
-    MagicCarpet(std::string name_, float speed_);
+    class MagicCarpet :
+        public AirVehicles
+    {
+    protected:
+        MagicCarpet(std::string name_, float speed_);
 
-public:
-    MAGICCARPET_EXPORT_API MagicCarpet(int distance);
+    public:
+        MAGICCARPET_EXPORT_API MagicCarpet(int distance);
 
-};
-
+    };
+}

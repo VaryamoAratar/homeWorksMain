@@ -7,14 +7,16 @@
 #define SWIFTCAMEL_EXPORT_API __declspec(dllimport)
 #endif // !FSWIFTCAMEL_EXPORT
 
-class SwiftCamel :
-    public GroundVehicles
+namespace race
 {
-protected:
-    SwiftCamel(std::string name_, float speed_, float drivingTime_, float firstRestTime_, float secondRestTime_, float nextRestTime_);
+    class SwiftCamel :
+        public GroundVehicles
+    {
+    protected:
+        SwiftCamel(std::string name_, float speed_, float drivingTime_, float firstRestTime_, float secondRestTime_, float nextRestTime_);
 
-public:
-    SWIFTCAMEL_EXPORT_API SwiftCamel();
+    public:
+        SWIFTCAMEL_EXPORT_API SwiftCamel();
 
-};
-
+    };
+}

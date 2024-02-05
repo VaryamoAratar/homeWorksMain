@@ -7,14 +7,16 @@
 #define EAGLE_EXPORT_API __declspec(dllimport)
 #endif // !FEAGLE_EXPORT
 
-class Eagle :
-    public AirVehicles
+namespace race
 {
-protected:
-    Eagle(std::string name_, float speed_);
+    class Eagle :
+        public AirVehicles
+    {
+    protected:
+        Eagle(std::string name_, float speed_);
 
-public:
-    EAGLE_EXPORT_API Eagle(int distance);
+    public:
+        EAGLE_EXPORT_API Eagle(int distance);
 
-};
-
+    };
+}

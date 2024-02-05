@@ -2,6 +2,7 @@
 #include"Vehicles.h"
 #include"Eagle.h"
 #include"MagicCarpet.h"
+using namespace race;
 
 int main()
 {
@@ -12,12 +13,17 @@ int main()
 	Eagle eagle(distance);
 	MagicCarpet magicCarpet(distance);
 
-	std::cout << broomstick.get_name() << ' ' << broomstick.get_speed() << std::endl;
-	std::cout << broomstick.get_drf() << '%' << std::endl;
-	std::cout << eagle.get_name() << ' ' << eagle.get_speed() << std::endl;
-	std::cout << eagle.get_drf() << '%' << std::endl;
-	std::cout << magicCarpet.get_name() << ' ' << magicCarpet.get_speed() << std::endl;
-	std::cout << magicCarpet.get_drf() << '%' << std::endl;
+	Vehicles* p = &broomstick;
+	std::cout << p->get_name() << ' ' << p->get_speed() << std::endl;
+	std::cout << p->get_drf() << '%' << std::endl;
+
+	p = &eagle;
+	std::cout << p->get_name() << ' ' << p->get_speed() << std::endl;
+	std::cout << p->get_drf() << '%' << std::endl;
+
+	p = &magicCarpet;
+	std::cout << p->get_name() << ' ' << p->get_speed() << std::endl;
+	std::cout << p->get_drf() << '%' << std::endl;
 
 	return 0;
 }

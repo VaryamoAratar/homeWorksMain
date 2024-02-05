@@ -7,14 +7,16 @@
 #define CENTAUR_EXPORT_API __declspec(dllimport)
 #endif // !FCENTAUR_EXPORT
 
-class Centaur :
-    public GroundVehicles
+namespace race
 {
-protected:
-    Centaur(std::string name_, short speed_, short drivingTime_, short nextRestTime_);
+    class Centaur :
+        public GroundVehicles
+    {
+    protected:
+        Centaur(std::string name_, short speed_, short drivingTime_, short nextRestTime_);
 
-public:
-    CENTAUR_EXPORT_API Centaur();
+    public:
+        CENTAUR_EXPORT_API Centaur();
 
-};
-
+    };
+}

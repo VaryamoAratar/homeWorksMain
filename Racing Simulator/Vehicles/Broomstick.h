@@ -7,14 +7,16 @@
 #define BROOMSTICK_EXPORT_API __declspec(dllimport)
 #endif // !FBROOMSTICK_EXPORT
 
-class Broomstick :
-    public AirVehicles
+namespace race
 {
-protected:
-    Broomstick(std::string name_, float speed_);
+    class Broomstick :
+        public AirVehicles
+    {
+    protected:
+        Broomstick(std::string name_, float speed_);
 
-public:
-    BROOMSTICK_EXPORT_API Broomstick(int distance);
+    public:
+        BROOMSTICK_EXPORT_API Broomstick(int distance);
 
-};
-
+    };
+}

@@ -7,14 +7,16 @@
 #define CAMEL_EXPORT_API __declspec(dllimport)
 #endif // !FCAMEL_EXPORT
 
-class Camel :
-    public GroundVehicles
+namespace race
 {
-protected:
-    Camel(std::string name_, short speed_, short drivingTime_, short firstRestTime_, short nextRestTime_);
+    class Camel :
+        public GroundVehicles
+    {
+    protected:
+        Camel(std::string name_, short speed_, short drivingTime_, short firstRestTime_, short nextRestTime_);
 
-public:
-    CAMEL_EXPORT_API Camel();
+    public:
+        CAMEL_EXPORT_API Camel();
 
-};
-
+    };
+}

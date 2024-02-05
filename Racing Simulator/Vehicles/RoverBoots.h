@@ -7,14 +7,16 @@
 #define ROVERROOTS_EXPORT_API __declspec(dllimport)
 #endif // !FROVERROOTS_EXPORT
 
-class RoverBoots :
-    public GroundVehicles
+namespace race
 {
-protected:
-    RoverBoots(std::string name_, short speed_, short drivingTime_, short firstRestTime_, short nextRestTime_);
+    class RoverBoots :
+        public GroundVehicles
+    {
+    protected:
+        RoverBoots(std::string name_, short speed_, short drivingTime_, short firstRestTime_, short nextRestTime_);
 
-public:
-    ROVERROOTS_EXPORT_API RoverBoots();
+    public:
+        ROVERROOTS_EXPORT_API RoverBoots();
 
-};
-
+    };
+}

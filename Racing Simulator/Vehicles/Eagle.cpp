@@ -1,12 +1,11 @@
 #include "Eagle.h"
 
-Eagle::Eagle(int distance) : Eagle("Îð¸ë", 8)
+namespace race
 {
-	if (distance)
+	Eagle::Eagle(int distance) : Eagle("Îð¸ë", 8)
 	{
-		drf = 6;
-	}
-	
-};
+		set_drf(6);
+	};
 
-Eagle::Eagle(std::string name_, float speed_) : AirVehicles(name_, speed_) {};
+	Eagle::Eagle(std::string name_, float speed_) : AirVehicles(name_, speed_) {};
+}
