@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#ifndef DYNAMIC_LIBRARY_EXPORTS
+#ifdef DYNAMIC_LIBRARY_EXPORTS
 #define MY_LIBRARY_DYNAMIC_API __declspec(dllexport)
 #else
 #define MY_LIBRARY_DYNAMIC_API __declspec(dllimport)
