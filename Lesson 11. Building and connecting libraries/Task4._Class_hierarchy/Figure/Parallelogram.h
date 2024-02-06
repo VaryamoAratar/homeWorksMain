@@ -1,6 +1,6 @@
 #pragma once
 #include "Quadrangle.h"
-#ifndef FIGURE_CLASS_EXPORT
+#ifdef FIGURE_EXPORTS
 #define FIGURE_EXP_API __declspec(dllexport)
 #else
 #define FIGURE_EXP_API __declspec(dllimport)

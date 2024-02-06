@@ -2,6 +2,13 @@
 #include <string>
 #include "Task4._Class_hierarchy.h"
 
+#ifdef FIGURE_EXPORTS
+#define FIGURE_EXP_API __declspec(dllexport)
+#else
+#define FIGURE_EXP_API __declspec(dllimport)
+#endif
+
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
