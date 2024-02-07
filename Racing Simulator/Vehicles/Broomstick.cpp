@@ -9,4 +9,5 @@ namespace race
 	};
 
 	Broomstick::Broomstick(std::string name_, float speed_) : AirVehicles(name_, speed_) {};
+
 }

@@ -1,11 +1,11 @@
 #pragma once
 #include "GroundVehicles.h"
 
-#ifndef FCENTAUR_EXPORT
-#define CENTAUR_EXPORT_API __declspec(dllexport)
-#elif
-#define CENTAUR_EXPORT_API __declspec(dllimport)
-#endif // !FCENTAUR_EXPORT
+#ifdef VEHICLES_EXPORTS
+#define VEHICLES_API __declspec(dllexport)
+#else
+#define VEHICLES_API __declspec(dllimport)
+#endif // !VEHICLES_EXPORTS
 
 namespace race
 {
@@ -16,7 +16,7 @@ namespace race
         Centaur(std::string name_, short speed_, short drivingTime_, short nextRestTime_);
 
     public:
-        CENTAUR_EXPORT_API Centaur();
+        VEHICLES_API Centaur();
 
     };
 }

@@ -1,11 +1,11 @@
 #pragma once
 #include "AirVehicles.h"
 
-#ifndef FMAGICCARPET_EXPORT
-#define MAGICCARPET_EXPORT_API __declspec(dllexport)
-#elif
-#define MAGICCARPET_EXPORT_API __declspec(dllimport)
-#endif // !FMAGICCARPET_EXPORT
+#ifdef VEHICLES_EXPORTS
+#define VEHICLES_API __declspec(dllexport)
+#else
+#define VEHICLES_API __declspec(dllimport)
+#endif // !VEHICLES_EXPORTS
 
 namespace race
 {
@@ -15,8 +15,9 @@ namespace race
     protected:
         MagicCarpet(std::string name_, float speed_);
 
-    public:
-        MAGICCARPET_EXPORT_API MagicCarpet(int distance);
 
+    public:
+        VEHICLES_API MagicCarpet();
+        VEHICLES_API void det_drf(int distance);
     };
 }

@@ -1,11 +1,11 @@
 #pragma once
 #include "AirVehicles.h"
 
-#ifndef FEAGLE_EXPORT
-#define EAGLE_EXPORT_API __declspec(dllexport)
-#elif
-#define EAGLE_EXPORT_API __declspec(dllimport)
-#endif // !FEAGLE_EXPORT
+#ifdef VEHICLES_EXPORTS
+#define VEHICLES_API __declspec(dllexport)
+#else
+#define VEHICLES_API __declspec(dllimport)
+#endif // !VEHICLES_EXPORTS
 
 namespace race
 {
@@ -16,7 +16,7 @@ namespace race
         Eagle(std::string name_, float speed_);
 
     public:
-        EAGLE_EXPORT_API Eagle(int distance);
+        VEHICLES_API Eagle(int distance);
 
     };
 }

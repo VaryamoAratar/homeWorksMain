@@ -1,11 +1,11 @@
 #pragma once
 #include "Vehicles.h"
 
-#ifndef FAIR_VEHICLES_EXPORT
-#define AIR_VEHICLES_EXPORT_API __declspec(dllexport)
-#elif
-#define AIR_VEHICLES_EXPORT_API __declspec(dllimport)
-#endif // !FAIR_VEHICLES_EXPORT
+#ifdef VEHICLES_EXPORTS
+#define VEHICLES_API __declspec(dllexport)
+#else
+#define VEHICLES_API __declspec(dllimport)
+#endif // !VEHICLES_EXPORTS
 
 namespace race
 {

@@ -1,11 +1,11 @@
 #pragma once
 #include "AirVehicles.h"
 
-#ifndef FBROOMSTICK_EXPORT
-#define BROOMSTICK_EXPORT_API __declspec(dllexport)
-#elif
-#define BROOMSTICK_EXPORT_API __declspec(dllimport)
-#endif // !FBROOMSTICK_EXPORT
+#ifdef VEHICLES_EXPORTS
+#define VEHICLES_API __declspec(dllexport)
+#else
+#define VEHICLES_API __declspec(dllimport)
+#endif // !VEHICLES_EXPORTS
 
 namespace race
 {
@@ -16,7 +16,7 @@ namespace race
         Broomstick(std::string name_, float speed_);
 
     public:
-        BROOMSTICK_EXPORT_API Broomstick(int distance);
+        VEHICLES_API Broomstick(int distance);
 
     };
 }

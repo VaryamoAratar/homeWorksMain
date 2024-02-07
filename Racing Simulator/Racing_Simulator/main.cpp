@@ -2,6 +2,13 @@
 #include"Vehicles.h"
 #include"Eagle.h"
 #include"MagicCarpet.h"
+
+#ifdef VEHICLES_EXPORTS
+#define VEHICLES_API __declspec(dllexport)
+#else
+#define VEHICLES_API __declspec(dllimport)
+#endif // !VEHICLES_EXPORTS
+
 using namespace race;
 
 int main()

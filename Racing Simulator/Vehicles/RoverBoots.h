@@ -1,11 +1,11 @@
 #pragma once
 #include "GroundVehicles.h"
 
-#ifndef FROVERROOTS_EXPORT
-#define ROVERROOTS_EXPORT_API __declspec(dllexport)
-#elif
-#define ROVERROOTS_EXPORT_API __declspec(dllimport)
-#endif // !FROVERROOTS_EXPORT
+#ifdef VEHICLES_EXPORTS
+#define VEHICLES_API __declspec(dllexport)
+#else
+#define VEHICLES_API __declspec(dllimport)
+#endif // !VEHICLES_EXPORTS
 
 namespace race
 {
@@ -16,7 +16,7 @@ namespace race
         RoverBoots(std::string name_, short speed_, short drivingTime_, short firstRestTime_, short nextRestTime_);
 
     public:
-        ROVERROOTS_EXPORT_API RoverBoots();
+        VEHICLES_API RoverBoots();
 
     };
 }
