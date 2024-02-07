@@ -15,9 +15,9 @@ namespace race
     protected:
         MagicCarpet(std::string name_, float speed_);
 
-
     public:
-        VEHICLES_API MagicCarpet();
-        VEHICLES_API void det_drf(int distance);
+        VEHICLES_API MagicCarpet();  
+        VEHICLES_API float get_drf(int distance) override;
+
     };
 }

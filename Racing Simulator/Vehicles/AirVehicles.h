@@ -14,7 +14,5 @@ namespace race
     {
     protected:
         AirVehicles(std::string name_, float speed_);
-        float drf{ 0 };
-
     };
 }

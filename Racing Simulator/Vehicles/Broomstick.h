@@ -16,7 +16,8 @@ namespace race
         Broomstick(std::string name_, float speed_);
 
     public:
-        VEHICLES_API Broomstick(int distance);
+        VEHICLES_API Broomstick();
+        VEHICLES_API float get_drf(int distance) override;
 
     };
 }
