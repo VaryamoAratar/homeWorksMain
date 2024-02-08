@@ -9,12 +9,6 @@
 
 namespace race
 {
-	enum class RaceType
-	{
-		AIR = 1,
-		GROUND,
-		OTHER
-	};
 	enum class Rest
 	{
 		NOREST,
@@ -28,6 +22,7 @@ namespace race
 	{
 	private:
 		float raceTime;
+		std::string name;
 
 	protected:
 		void set_race_time_air(Vehicles* vehicles, int distance);		//Время гонки для воздушного транспорта
@@ -35,6 +30,7 @@ namespace race
 
 
 	public:
+		RACE_EXP_API std::string get_name();
 		RACE_EXP_API Race_compil(Vehicles* vehicles, int distance);
 		RACE_EXP_API float get_race_time(); //Выдает время гонки
 	};

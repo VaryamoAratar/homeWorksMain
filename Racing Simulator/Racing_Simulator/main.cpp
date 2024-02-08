@@ -1,19 +1,5 @@
 #include "main.h"
 
-namespace race
-{
-	enum class Transport
-	{
-		ROVERBOOTS = 1,
-		BROOMSTICK,
-		CAMEL,
-		CENTAUR,
-		EAGLE,
-		SWIFTCAMEL,
-		MAGICCARPET,
-		EXIT = 0
-	};
-}
 
 using namespace race;
 
@@ -21,52 +7,108 @@ int main()
 {
 	setlocale(LC_ALL, "russian");
 
-	int distance{ 0 };
-	std::cout << "Введите длину гонки: ";
-	std::cin >> distance;
-	Broomstick broomstick;
-	Eagle eagle;
-	MagicCarpet magicCarpet;
-	Camel camel;
-	Centaur centaur;
-	RoverBoots roverBoots;
-	SwiftCamel swiftCamel;
+	RaceType raceType;
+	RunRace runRace;
+	FinRace finRace;
+	Transport transport;
+	int distance;
+	int countTranspotr;
+	Race_compil** race_compil;
 
-	Vehicles* p = &broomstick;
-	Race_compil f1(p, distance);
-	std::cout << "\nName: \t\t" << p->get_name() << '\n' << "Speed: \t\t" << p->get_speed() << "km/h" << std::endl;
-	std::cout << "Distance: \t" << distance << "km\n" << "Time race: \t" << f1.get_race_time() << 'h' << '\n' << std::endl;
+	//начало
+	do
+	{
+		//Приветствие и выбор типа гонки
+		printStart(raceType);
+		//Ввод длины дистанции
+		enteringDistance(distance);
+		//Сброс флагов
+		setTransportFlag();
+		countTranspotr = 0;
+		//выбор регистрация или гонка
+		do
+		{
+			if (countTranspotr == 0) { printRun(runRace, countTranspotr); };
+			//регистрация ТС
+			do
+			{
+				regTransport(transport, raceType, distance, countTranspotr);
+			} while (!(transport == Transport::ENDREGISTRATION));
+
+			if (countTranspotr > 0) { printRun(runRace, countTranspotr); };
+
+		} while (!(runRace == RunRace::STARTRACE));
+		//Создаем массив указателей для сортировки и вывода результата
+		Race_compil** race_compil = new Race_compil * [countTranspotr + 1];
+		//Заполняем массив в зависимости от зарегистрированных ТС
+		if (countTranspotr != 0)
+		{
+			for (int i = 0; i < countTranspotr;)
+			{
+				AirVehicles tmp;
+				Vehicles* vehicles = &tmp;
+				race_compil[countTranspotr] = new Race_compil(vehicles, distance);
+
+				if (roverBootsFlag)
+				{
+					RoverBoots roverBoots;
+					Vehicles* vehicles = &roverBoots;
+					race_compil[i] = new Race_compil(vehicles, distance);
+					i++;
+				}
+				if (camelFlag)
+				{
+					Camel camel;
+					Vehicles* vehicles = &camel;
+					race_compil[i] = new Race_compil(vehicles, distance);
+					i++;
+				}
+				if (swiftCamelFlag)
+				{
+					SwiftCamel swiftCamel;
+					Vehicles* vehicles = &swiftCamel;
+					race_compil[i] = new Race_compil(vehicles, distance);
+					i++;
+				}
+				if (eagleFlag)
+				{
+					Eagle eagle;
+					Vehicles* vehicles = &eagle;
+					race_compil[i] = new Race_compil(vehicles, distance);
+					i++;
+				}
+				if (centaurFlag)
+				{
+					Centaur centaur;
+					Vehicles* vehicles = &centaur;
+					race_compil[i] = new Race_compil(vehicles, distance);
+					i++;
+				}
+				if (magicCarpetFlag)
+				{
+					MagicCarpet magicCarpet;
+					Vehicles* vehicles = &magicCarpet;
+					race_compil[i] = new Race_compil(vehicles, distance);
+					i++;
+				}
+				if (broomstickFlag)
+				{
+					Broomstick broomstick;
+					Vehicles* vehicles = &broomstick;
+					race_compil[i] = new Race_compil(vehicles, distance);
+					i++;
+				}
+			}
+			//Вывод результатов гонки
+			printResult(race_compil, countTranspotr);
+		}
+		//Выбор действий после объявления результатов
+		printFin(finRace);
+		//Очистка памяти	
+		clearMemory(race_compil, countTranspotr);
+
+	} while (finRace != FinRace::EXIT);
 
 
-	p = &eagle;
-	Race_compil f2(p, distance);
-	std::cout << "Name: \t\t" << p->get_name() << '\n' << "Speed: \t\t" << p->get_speed() << "km/h" << std::endl;
-	std::cout << "Distance: \t" << distance << "km\n" << "Time race: \t" << f2.get_race_time() << 'h' << '\n' << std::endl;
-
-	p = &magicCarpet;
-	Race_compil f3(p, distance);
-	std::cout << "Name: \t\t" << p->get_name() << '\n' << "Speed: \t\t" << p->get_speed() << "km/h" << std::endl;
-	std::cout << "Distance: \t" << distance << "km\n" << "Time race: \t" << f3.get_race_time() << 'h' << '\n' << std::endl;
-
-	p = &camel;
-	Race_compil f4(p, distance);
-	std::cout << "Name: \t\t" << p->get_name() << '\n' << "Speed: \t\t" << p->get_speed() << "km/h" << std::endl;
-	std::cout << "Distance: \t" << distance << "km\n" << "Time race: \t" << f4.get_race_time() << 'h' << '\n' << std::endl;
-
-	p = &centaur;
-	Race_compil f5(p, distance);
-	std::cout << "Name: \t\t" << p->get_name() << '\n' << "Speed: \t\t" << p->get_speed() << "km/h" << std::endl;
-	std::cout << "Distance: \t" << distance << "km\n" << "Time race: \t" << f5.get_race_time() << 'h' << '\n' << std::endl;
-
-	p = &roverBoots;
-	Race_compil f6(p, distance);
-	std::cout << "Name: \t\t" << p->get_name() << '\n' << "Speed: \t\t" << p->get_speed() << "km/h" << std::endl;
-	std::cout << "Distance: \t" << distance << "km\n" << "Time race: \t" << f6.get_race_time() << 'h' << '\n' << std::endl;
-
-	p = &swiftCamel;
-	Race_compil f7(p, distance);
-	std::cout << "Name: \t\t" << p->get_name() << '\n' << "Speed: \t\t" << p->get_speed() << "km/h" << std::endl;
-	std::cout << "Distance: \t" << distance << "km\n" << "Time race: \t" << f7.get_race_time() << 'h' << '\n' << std::endl;
-
-	return 0;
+ 	return 0;
 }

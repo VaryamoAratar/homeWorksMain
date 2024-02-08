@@ -7,11 +7,13 @@ namespace race
 		if (vehicles->get_transport_type() == race::TransportType::AIR)
 		{
 			set_race_time_air(vehicles, distance);
+
 		}
 		else
 		{
 			set_race_time_ground(vehicles, distance);
 		}
+		name = vehicles->get_name();
 	};
 
 	float Race_compil::get_race_time() { return raceTime; };//получить время гонки
@@ -55,5 +57,10 @@ namespace race
 			numberOfRest--;
 		}
 	};
+
+	std::string Race_compil::get_name()
+	{
+		return name;
+	}
 
 }

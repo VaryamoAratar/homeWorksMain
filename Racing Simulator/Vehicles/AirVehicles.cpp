@@ -8,4 +8,5 @@ namespace race
 		set_transport_type(TransportType::AIR);
 	};
 
+	AirVehicles::AirVehicles() : AirVehicles("Неизвестно", 1) {};
 }

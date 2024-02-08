@@ -14,5 +14,7 @@ namespace race
     {
     protected:
         AirVehicles(std::string name_, float speed_);
+    public:
+        VEHICLES_API AirVehicles();
     };
 }

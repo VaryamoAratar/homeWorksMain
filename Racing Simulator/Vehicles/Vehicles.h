@@ -19,15 +19,15 @@ namespace race
 	class Vehicles
 	{
 	private:
-		TransportType transportType;
+		TransportType transportType = TransportType::AIR;
 		float drivingTime;
 		float firstRestTime;
 		float secondRestTime;
 		float nextRestTime;
-		float drf;
+		float drf = 0;
 
 	protected:
-		std::string name{ "Неизвестный транспорт" };
+		std::string name;
 		float speed;
 		Vehicles(std::string name_, float speed_);
 		void set_transport_type(const TransportType in);

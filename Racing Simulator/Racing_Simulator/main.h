@@ -8,11 +8,11 @@
 #include "RoverBoots.h"
 #include "SwiftCamel.h"
 #include "Race_compil.h"
+#include "Function.h"
+#include <string>
 
-
-
-#ifdef VEHICLES_EXPORTS
-#define VEHICLES_API __declspec(dllexport)
+#ifdef RACEFUNCTION_EXPORTS
+#define FUNCTION_API __declspec(dllexport)
 #else
-#define VEHICLES_API __declspec(dllimport)
-#endif // !VEHICLES_EXPORTS
+#define FUNCTION_API __declspec(dllimport)
+#endif // RACE_FUNCTION_EXPORTS
