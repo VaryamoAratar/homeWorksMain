@@ -19,7 +19,7 @@ namespace race
 	class Vehicles
 	{
 	private:
-		TransportType transportType = TransportType::AIR;
+		TransportType transportType;
 		float drivingTime;
 		float firstRestTime;
 		float secondRestTime;

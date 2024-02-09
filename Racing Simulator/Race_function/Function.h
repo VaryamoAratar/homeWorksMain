@@ -65,6 +65,6 @@ namespace race
 	//Сортировка пузырьком и вывод результатов гонки
 	FUNCTION_API void printResult(Race_compil** race_compil_, int& nSize);
 	//Очистка выделенной памяти
-	void clearMemory(Race_compil** race_compil, int& nSize);
+	FUNCTION_API void clearMemory(Race_compil** race_compil, int& nSize);
 
 }

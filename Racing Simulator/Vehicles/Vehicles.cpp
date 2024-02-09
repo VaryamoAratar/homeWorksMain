@@ -6,6 +6,7 @@ namespace race
 	{
 		name = name_;
 		speed = speed_;
+		transportType = TransportType::AIR;
 	};
 
 	void Vehicles::set_transport_type(const TransportType in) { transportType = in; }
