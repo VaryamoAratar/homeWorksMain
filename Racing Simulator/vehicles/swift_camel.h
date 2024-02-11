@@ -1,5 +1,5 @@
 #pragma once
-#include "GroundVehicles.h"
+#include "ground_vehicles.h"
 
 #ifdef VEHICLES_EXPORTS
 #define VEHICLES_API __declspec(dllexport)
@@ -7,13 +7,13 @@
 #define VEHICLES_API __declspec(dllimport)
 #endif // !VEHICLES_EXPORTS
 
-namespace race
+namespace racing_simulator
 {
     class SwiftCamel :
         public GroundVehicles
     {
     protected:
-        SwiftCamel(std::string name_, float speed_, float drivingTime_, float firstRestTime_, float secondRestTime_, float nextRestTime_);
+        SwiftCamel(std::string name, float speed, float driving_time, float first_rest_time, float second_rest_time, float next_rest_time);
 
     public:
         VEHICLES_API SwiftCamel();

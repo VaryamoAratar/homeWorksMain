@@ -9,14 +9,14 @@
 
 namespace racing_simulator
 {
-    class Centaur :
+    class RoverBoots :
         public GroundVehicles
     {
     protected:
-        Centaur(std::string name, short speed, short driving_time, short next_rest_time);
+        RoverBoots(std::string name, short speed, short driving_time, short first_rest_time, short next_rest_time);
 
     public:
-        VEHICLES_API Centaur();
+        VEHICLES_API RoverBoots();
 
     };
 }

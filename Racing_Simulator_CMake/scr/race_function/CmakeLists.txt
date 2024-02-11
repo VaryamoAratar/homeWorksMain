@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.22.2)
+
+set(Project_name race_function_dll)
+
+project(${Project_name}
+	VERSION 0.1
+	LANGUAGES CXX)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../../bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../../lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ../../lib)
+
+include(../lib_config.cmake)
+include_directories(../vehicles)
+include_directories(../race)
+
+set(HEADERS 
+	race_function.h)
+
+set(SOURCES
+	race_function.cpp)
+
+set(DLL_SOURCES 
+	vehicles_dll
+	race_dll
+)
+
+
+add_library(${Project_name}
+	SHARED
+	${HEADERS}
+	${SOURCES})
+
+target_link_libraries(${Project_name}
+	${DLL_SOURCES})

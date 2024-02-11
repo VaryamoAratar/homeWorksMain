@@ -24,6 +24,7 @@
     <ProjectGuid>{78e5f664-69af-477f-bbdf-24c44ae325b5}</ProjectGuid>
     <RootNamespace>Vehicles</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>vehicles</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -139,28 +140,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AirVehicles.h" />
-    <ClInclude Include="Broomstick.h" />
-    <ClInclude Include="Camel.h" />
-    <ClInclude Include="Centaur.h" />
-    <ClInclude Include="Eagle.h" />
-    <ClInclude Include="GroundVehicles.h" />
-    <ClInclude Include="MagicCarpet.h" />
-    <ClInclude Include="RoverBoots.h" />
-    <ClInclude Include="SwiftCamel.h" />
-    <ClInclude Include="Vehicles.h" />
+    <ClInclude Include="air_vehicles.h" />
+    <ClInclude Include="broomstick.h" />
+    <ClInclude Include="camel.h" />
+    <ClInclude Include="centaur.h" />
+    <ClInclude Include="eagle.h" />
+    <ClInclude Include="ground_vehicles.h" />
+    <ClInclude Include="magic_carpet.h" />
+    <ClInclude Include="rover_boots.h" />
+    <ClInclude Include="swift_camel.h" />
+    <ClInclude Include="vehicles.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AirVehicles.cpp" />
-    <ClCompile Include="Broomstick.cpp" />
-    <ClCompile Include="Camel.cpp" />
-    <ClCompile Include="Centaur.cpp" />
-    <ClCompile Include="Eagle.cpp" />
-    <ClCompile Include="GroundVehicles.cpp" />
-    <ClCompile Include="MagicCarpet.cpp" />
-    <ClCompile Include="RoverBoots.cpp" />
-    <ClCompile Include="SwiftCamel.cpp" />
-    <ClCompile Include="Vehicles.cpp" />
+    <ClCompile Include="air_vehicles.cpp" />
+    <ClCompile Include="broomstick.cpp" />
+    <ClCompile Include="camel.cpp" />
+    <ClCompile Include="centaur.cpp" />
+    <ClCompile Include="eagle.cpp" />
+    <ClCompile Include="ground_vehicles.cpp" />
+    <ClCompile Include="magic_carpet.cpp" />
+    <ClCompile Include="rover_boots.cpp" />
+    <ClCompile Include="swift_camel.cpp" />
+    <ClCompile Include="vehicles.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

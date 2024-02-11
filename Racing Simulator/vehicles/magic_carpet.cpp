@@ -1,12 +1,12 @@
-#include "MagicCarpet.h"
+#include "magic_carpet.h"
 
-namespace race
+namespace racing_simulator
 {
 	MagicCarpet::MagicCarpet() : MagicCarpet("Ковер-самолет", 10) {};
 	
-	MagicCarpet::MagicCarpet(std::string name_, float speed_) : AirVehicles(name_, speed_) {};
+	MagicCarpet::MagicCarpet(std::string name, float speed) : AirVehicles(name, speed) {};
 
-	float MagicCarpet::get_drf(int distance)
+	float MagicCarpet::GetDrf(int distance)
 	{
 		if (distance <= 1000) { return 0; }
 		else if (1000 < distance && distance <= 5000) { return 3; }

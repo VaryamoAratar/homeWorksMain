@@ -9,14 +9,14 @@
 
 namespace racing_simulator
 {
-    class Centaur :
+    class SwiftCamel :
         public GroundVehicles
     {
     protected:
-        Centaur(std::string name, short speed, short driving_time, short next_rest_time);
+        SwiftCamel(std::string name, float speed, float driving_time, float first_rest_time, float second_rest_time, float next_rest_time);
 
     public:
-        VEHICLES_API Centaur();
+        VEHICLES_API SwiftCamel();
 
     };
 }

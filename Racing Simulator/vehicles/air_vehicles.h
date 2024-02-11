@@ -1,5 +1,5 @@
 #pragma once
-#include "Vehicles.h"
+#include "vehicles.h"
 
 #ifdef VEHICLES_EXPORTS
 #define VEHICLES_API __declspec(dllexport)
@@ -7,13 +7,14 @@
 #define VEHICLES_API __declspec(dllimport)
 #endif // !VEHICLES_EXPORTS
 
-namespace race
+namespace racing_simulator
 {
-    class GroundVehicles :
+    class AirVehicles :
         public Vehicles
     {
     protected:
-        GroundVehicles(std::string name_, float speed_, float drivingTime_, float firstRestTime_, float secondRestTime_, float nextRestTime_);
-   
+        AirVehicles(std::string name, float speed);
+    public:
+        VEHICLES_API AirVehicles();
     };
 }

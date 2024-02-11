@@ -27,66 +27,66 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vehicles.h">
+    <ClInclude Include="vehicles.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="AirVehicles.h">
+    <ClInclude Include="air_vehicles.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="GroundVehicles.h">
+    <ClInclude Include="ground_vehicles.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Camel.h">
+    <ClInclude Include="camel.h">
       <Filter>Файлы заголовков\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="Centaur.h">
+    <ClInclude Include="centaur.h">
       <Filter>Файлы заголовков\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="SwiftCamel.h">
+    <ClInclude Include="swift_camel.h">
       <Filter>Файлы заголовков\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="RoverBoots.h">
+    <ClInclude Include="rover_boots.h">
       <Filter>Файлы заголовков\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="MagicCarpet.h">
+    <ClInclude Include="magic_carpet.h">
       <Filter>Файлы заголовков\Air</Filter>
     </ClInclude>
-    <ClInclude Include="Eagle.h">
+    <ClInclude Include="eagle.h">
       <Filter>Файлы заголовков\Air</Filter>
     </ClInclude>
-    <ClInclude Include="Broomstick.h">
+    <ClInclude Include="broomstick.h">
       <Filter>Файлы заголовков\Air</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Vehicles.cpp">
+    <ClCompile Include="vehicles.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="AirVehicles.cpp">
+    <ClCompile Include="air_vehicles.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="GroundVehicles.cpp">
+    <ClCompile Include="ground_vehicles.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Camel.cpp">
+    <ClCompile Include="camel.cpp">
       <Filter>Исходные файлы\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="Centaur.cpp">
+    <ClCompile Include="centaur.cpp">
       <Filter>Исходные файлы\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="SwiftCamel.cpp">
+    <ClCompile Include="swift_camel.cpp">
       <Filter>Исходные файлы\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="RoverBoots.cpp">
+    <ClCompile Include="rover_boots.cpp">
       <Filter>Исходные файлы\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="MagicCarpet.cpp">
+    <ClCompile Include="magic_carpet.cpp">
       <Filter>Исходные файлы\Air</Filter>
     </ClCompile>
-    <ClCompile Include="Eagle.cpp">
+    <ClCompile Include="eagle.cpp">
       <Filter>Исходные файлы\Air</Filter>
     </ClCompile>
-    <ClCompile Include="Broomstick.cpp">
+    <ClCompile Include="broomstick.cpp">
       <Filter>Исходные файлы\Air</Filter>
     </ClCompile>
   </ItemGroup>

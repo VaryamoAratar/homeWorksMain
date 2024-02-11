@@ -1,5 +1,5 @@
 #pragma once
-#include "AirVehicles.h"
+#include "air_vehicles.h"
 
 #ifdef VEHICLES_EXPORTS
 #define VEHICLES_API __declspec(dllexport)
@@ -7,17 +7,17 @@
 #define VEHICLES_API __declspec(dllimport)
 #endif // !VEHICLES_EXPORTS
 
-namespace race
+namespace racing_simulator
 {
-    class MagicCarpet :
+    class Eagle :
         public AirVehicles
     {
     protected:
-        MagicCarpet(std::string name_, float speed_);
+        Eagle(std::string name, float speed);
 
     public:
-        VEHICLES_API MagicCarpet();  
-        VEHICLES_API float get_drf(int distance) override;
+        VEHICLES_API Eagle();
+        VEHICLES_API float GetDrf(int distance) override;
 
     };
 }

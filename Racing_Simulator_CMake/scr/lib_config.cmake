@@ -1,0 +1,4 @@
+add_compile_definitions(
+	RACE_EXPORTS
+	RACEFUNCTION_EXPORTS
+	VEHICLES_EXPORTS)

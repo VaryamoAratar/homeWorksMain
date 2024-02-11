@@ -1,16 +1,16 @@
-#include "camel.h"
+#include "rover_boots.h"
 
 namespace racing_simulator
 {
-	Camel::Camel() : Camel("Верблюд", 10, 30, 5, 8)
+	RoverBoots::RoverBoots() : RoverBoots("Ботинки-вездеходы", 6, 60, 10, 5)
 	{};
 
-	Camel::Camel(
+	RoverBoots::RoverBoots(
 		std::string name,
 		short speed,
 		short driving_time,
 		short first_rest_time,
 		short next_rest_time) :
 		GroundVehicles(name, speed, driving_time, first_rest_time, next_rest_time, next_rest_time)
-	{};
-}
+	{}
+};

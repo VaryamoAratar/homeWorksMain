@@ -1,0 +1,44 @@
+cmake_minimum_required(VERSION 3.22.2)
+
+set(Project_name vehicles_dll)
+
+project(${Project_name}
+	VERSION 0.1
+	LANGUAGES CXX)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../../bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../../lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ../../lib)
+
+include(../lib_config.cmake)
+include_directories(../vehicles)
+include_directories(../race)
+
+set(HEADERS
+	broomstick.h
+	eagle.h
+	magic_carpet.h
+	camel.h
+	centaur.h
+	rover_boots.h
+	swift_camel.h
+	vehicles.h 
+	air_vehicles.h 
+	ground_vehicles.h)
+
+set(SOURCES
+	broomstick.cpp
+	eagle.cpp
+	magic_carpet.cpp
+	camel.cpp
+	centaur.cpp
+	rover_boots.cpp
+	swift_camel.cpp
+	vehicles.cpp 
+	air_vehicles.cpp 
+	ground_vehicles.cpp)
+
+add_library(${Project_name}
+	SHARED
+	${HEADERS}
+	${SOURCES})

@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Race_compil.h">
+    <ClInclude Include="race.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Race_compil.cpp">
+    <ClCompile Include="race.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

@@ -9,14 +9,14 @@
 
 namespace racing_simulator
 {
-    class Eagle :
+    class MagicCarpet :
         public AirVehicles
     {
     protected:
-        Eagle(std::string name, float speed);
+        MagicCarpet(std::string name, float speed);
 
     public:
-        VEHICLES_API Eagle();
+        VEHICLES_API MagicCarpet();  
         VEHICLES_API float GetDrf(int distance) override;
 
     };

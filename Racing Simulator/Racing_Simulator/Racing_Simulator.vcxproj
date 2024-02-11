@@ -24,6 +24,7 @@
     <ProjectGuid>{a11446c4-bb50-4000-a951-038fcc38f7a7}</ProjectGuid>
     <RootNamespace>RacingSimulator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>racing_simulator</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,8 +141,8 @@
     <ProjectReference Include="..\Race\Race.vcxproj">
       <Project>{3e7c01eb-07d4-44ca-9269-b90b349e255a}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Race_function\Race_function.vcxproj">
-      <Project>{ef74b2de-03ad-4b83-85e3-b95364a9e16c}</Project>
+    <ProjectReference Include="..\Race_Function\Race_Function.vcxproj">
+      <Project>{5ddb0fc0-4fc4-40f0-a516-8eadb8b79c48}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Vehicles\Vehicles.vcxproj">
       <Project>{78e5f664-69af-477f-bbdf-24c44ae325b5}</Project>

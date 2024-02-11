@@ -1,0 +1,39 @@
+cmake_minimum_required(VERSION 3.22.2)
+
+set(Project_name
+	racing_simulator)
+
+project(${Project_name}
+	VERSION 0.1
+	LANGUAGES CXX)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ../lib)
+
+include(lib_config.cmake)
+include_directories(vehicles)
+include_directories(race)
+include_directories(race_function)
+
+add_subdirectory(vehicles)
+add_subdirectory(race)
+add_subdirectory(race_function)
+
+set(HEADERS
+	main.h)
+
+set(SOURCES
+	main.cpp)
+
+set(DLL_SOURCES
+	vehicles_dll
+	race_dll
+	race_function_dll)
+
+add_executable(${Project_name}
+	${HEADERS}
+	${SOURCES})
+
+target_link_libraries(${Project_name}
+	${DLL_SOURCES})
