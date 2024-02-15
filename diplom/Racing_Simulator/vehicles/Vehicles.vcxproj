@@ -148,6 +148,7 @@
     <ClInclude Include="ground_vehicles.h" />
     <ClInclude Include="magic_carpet.h" />
     <ClInclude Include="rover_boots.h" />
+    <ClInclude Include="spec.h" />
     <ClInclude Include="swift_camel.h" />
     <ClInclude Include="vehicles.h" />
   </ItemGroup>

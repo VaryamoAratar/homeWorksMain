@@ -24,7 +24,8 @@ set(HEADERS
 	swift_camel.h
 	vehicles.h 
 	air_vehicles.h 
-	ground_vehicles.h)
+	ground_vehicles.h
+	spec.h)
 
 set(SOURCES
 	broomstick.cpp

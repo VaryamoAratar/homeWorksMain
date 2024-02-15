@@ -57,6 +57,9 @@
     <ClInclude Include="broomstick.h">
       <Filter>Файлы заголовков\Air</Filter>
     </ClInclude>
+    <ClInclude Include="spec.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vehicles.cpp">

@@ -1,12 +1,7 @@
 #pragma once
 #include<iostream>
 #include<string>
-
-#ifdef VEHICLES_EXPORTS
-#define VEHICLES_API __declspec(dllexport)
-#else
-#define VEHICLES_API __declspec(dllimport)
-#endif // !VEHICLES_EXPORTS
+#include"spec.h"
 
 namespace racing_simulator
 {

@@ -1,4 +1,5 @@
-#include "race.h"
+#include "race.h" 
+#include <stdexcept>
 
 namespace racing_simulator
 {
@@ -25,19 +26,35 @@ namespace racing_simulator
 	};
 
 	void RunRace::setRaceTimeGround(Vehicles* vehicles, int distance)
-	{ 
+	{
 		float race_time_full_ = distance / vehicles->GetSpeed(); //общее время гонки
-		float number_of_rest_vr_ = race_time_full_ / vehicles->GetDrivingTime(); //число перерывов Double
+		float driving_time = vehicles->GetDrivingTime();
+		float number_of_rest_vr_ = race_time_full_ / driving_time; //число перерывов Double
 		int number_of_rest_;//число перерывов Int
-		if (number_of_rest_vr_ == 1.0) //Если число перерывов на отдых целое и равно 1, то значит отдых не нужен
+
+		try
 		{
-			number_of_rest_ = 0;
-		}
-		else
-		{
+			
+			if (!fmodf(race_time_full_, driving_time))
+			{
+				throw ("Целое число периодов движения");
+			}
 			number_of_rest_ = number_of_rest_vr_;
 		}
+		catch (...)
+		{
+			if (number_of_rest_vr_ == 1.0) //Если число перерывов на отдых целое и равно 1, то значит отдых не нужен
+			{
+				number_of_rest_ = 0;
+			}
+			else
+			{
+				number_of_rest_ = number_of_rest_vr_ - 1;
+			}
+		}
+	
 		race_time_ = race_time_full_;
+
 		//добавляем время отдыха ко времени гонки
 		while (number_of_rest_)
 		{

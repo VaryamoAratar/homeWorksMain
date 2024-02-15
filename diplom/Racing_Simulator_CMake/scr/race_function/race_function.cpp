@@ -136,7 +136,7 @@ namespace racing_simulator
 			{
 				if (type_race == TypeRace::kAir) { std::cout << "Вы пытаетесь зарегистрировать неподходящий тип транспорта!\n"; }
 				else if (flag) { IfReg(transport, in); }
-				else { IfNotReg(transport, in, count_transpotr, reg); }
+				else { IfNotReg(transport, in, count_transpotr, reg); flag = DefineFlag(transport, false); }
 			}
 			else if (transport == Transport::kEagle ||
 				transport == Transport::kMagicCarpet ||
@@ -144,13 +144,13 @@ namespace racing_simulator
 			{
 				if (type_race == TypeRace::kGround) { std::cout << "Вы пытаетесь зарегистрировать неподходящий тип транспорта!\n"; }
 				else if (flag) { IfReg(transport, in); }
-				else { IfNotReg(transport, in, count_transpotr, reg); }
+				else { IfNotReg(transport, in, count_transpotr, reg); flag = DefineFlag(transport, false); }
 			}
 		}
 		else
 		{
 			if (flag) { IfReg(transport, in); }
-			else { IfNotReg(transport, in, count_transpotr, reg); }
+			else { IfNotReg(transport, in, count_transpotr, reg); flag = DefineFlag(transport, false); }
 		}
 	}
 	void IfReg(Transport& transport, std::string in)
@@ -268,49 +268,42 @@ namespace racing_simulator
 		{
 			bool flag = DefineFlag(transport, true);
 			InitCase(transport, "Ботинки-вездеходы", type_race, count_transpotr, reg, flag);
-			flag = DefineFlag(transport, false);
 		}
 		break;
 		case Transport::kCamel:
 		{
 			bool flag = DefineFlag(transport, true);
 			InitCase(transport, "Верблюд", type_race, count_transpotr, reg, flag);
-			flag = DefineFlag(transport, false);
 		}
 		break;
 		case Transport::kCentaur:
 		{
 			bool flag = DefineFlag(transport, true);
 			InitCase(transport, "Кентавр", type_race, count_transpotr, reg, flag);
-			flag = DefineFlag(transport, false);
 		}
 		break;
 		case Transport::kSwiftCamel:
 		{
 			bool flag = DefineFlag(transport, true);
 			InitCase(transport, "Верблюд-скороход", type_race, count_transpotr, reg, flag);
-			flag = DefineFlag(transport, false);
 		}
 		break;
 		case Transport::kBroomstick:
 		{
 			bool flag = DefineFlag(transport, true);
 			InitCase(transport, "Метла", type_race, count_transpotr, reg, flag);
-			flag = DefineFlag(transport, false);
 		}
 		break;
 		case Transport::kEagle:
 		{
 			bool flag = DefineFlag(transport, true);
 			InitCase(transport, "Орёл", type_race, count_transpotr, reg, flag);
-			flag = DefineFlag(transport, false);
 		}
 		break;
 		case Transport::kMagicCarpet:
 		{
 			bool flag = DefineFlag(transport, true);
 			InitCase(transport, "Ковер-самолёт", type_race, count_transpotr, reg, flag);
-			flag = DefineFlag(transport, false);
 		}
 		break;
 
@@ -364,7 +357,8 @@ namespace racing_simulator
 	//Раполнение массива указателей на результаты гонок
 	FOO_EXP_API void FillingArray(RunRace** run_race, int& count_transpotr, int& distance)
 	{
-		for (int i = 0; i < count_transpotr;)
+		int i = 0;
+		while (i < count_transpotr)
 		{
 			AirVehicles tmp;
 			Vehicles* p = &tmp;
